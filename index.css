@@ -1,0 +1,120 @@
+.wrapper {
+  margin: 50px 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column; }
+  @media only screen and (min-width: 769px) {
+    .wrapper {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around; } }
+  .wrapper .container--canvas i {
+    display: none; }
+    @media only screen and (min-width: 769px) {
+      .wrapper .container--canvas i {
+        display: block;
+        margin-top: 30px; } }
+  .wrapper .container--progress {
+    margin-top: 50px;
+    width: 300px; }
+    @media only screen and (min-width: 769px) {
+      .wrapper .container--progress {
+        width: 400px; } }
+    .wrapper .container--progress i {
+      display: none; }
+      @media only screen and (min-width: 769px) {
+        .wrapper .container--progress i {
+          display: block;
+          margin-top: 50px; } }
+    .wrapper .container--progress progress {
+      width: 100%;
+      border: 0;
+      height: 20px;
+      border-radius: 20px;
+      position: relative; }
+    .wrapper .container--progress span {
+      cursor: pointer;
+      -moz-user-select: none;
+      /* Firefox */
+      -ms-user-select: none;
+      /* Internet Explorer */
+      -webkit-user-select: none;
+      /* Chrome, Safari, and Opera */
+      -webkit-touch-callout: none;
+      /* Disable Android and iOS callouts*/ }
+    .wrapper .container--progress .progress__coffee {
+      position: relative; }
+      .wrapper .container--progress .progress__coffee span {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 35%;
+        padding: 10px 5px;
+        border-radius: 100%;
+        border: 2px solid black;
+        font-size: 15px;
+        background-color: #C05839; }
+      .wrapper .container--progress .progress__coffee progress::-webkit-progress-bar {
+        border: 0;
+        background-color: #A9ABAE;
+        border-radius: 20px; }
+      .wrapper .container--progress .progress__coffee progress::-webkit-progress-value {
+        border: 0;
+        border-radius: 20px;
+        background-color: #C05839; }
+      .wrapper .container--progress .progress__coffee progress::-moz-progress-bar {
+        border: 0;
+        background-color: #A9ABAE;
+        border-radius: 20px; }
+    .wrapper .container--progress .progress__milk {
+      margin-top: 30px;
+      position: relative; }
+      .wrapper .container--progress .progress__milk span {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 25%;
+        padding: 10px 5px;
+        border-radius: 100%;
+        border: 2px solid black;
+        font-size: 15px;
+        background-color: #F6F7D2; }
+      .wrapper .container--progress .progress__milk progress::-webkit-progress-bar {
+        border: 0;
+        background-color: #A9ABAE;
+        border-radius: 20px; }
+      .wrapper .container--progress .progress__milk progress::-webkit-progress-value {
+        border: 0;
+        border-radius: 20px;
+        background-color: #F6F7D2; }
+      .wrapper .container--progress .progress__milk progress::-moz-progress-bar {
+        border: 0;
+        background-color: #A9ABAE;
+        border-radius: 20px; }
+    .wrapper .container--progress .progress__foam {
+      margin-top: 30px;
+      position: relative; }
+      .wrapper .container--progress .progress__foam span {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 25%;
+        padding: 10px 5px;
+        border-radius: 100%;
+        border: 2px solid black;
+        font-size: 15px;
+        background-color: #FBF392; }
+      .wrapper .container--progress .progress__foam progress::-webkit-progress-bar {
+        border: 0;
+        background-color: #A9ABAE;
+        border-radius: 20px; }
+      .wrapper .container--progress .progress__foam progress::-webkit-progress-value {
+        border: 0;
+        border-radius: 20px;
+        background-color: #FBF392; }
+      .wrapper .container--progress .progress__foam progress::-moz-progress-bar {
+        border: 0;
+        background-color: #A9ABAE;
+        border-radius: 20px; }
+
+/*# sourceMappingURL=index.css.map */

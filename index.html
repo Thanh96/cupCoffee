@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cup Coffee</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+  <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+  <div class="wrapper">
+    <div class="container--canvas">
+      <canvas id="myCanvas" width="300" height="450">
+      </canvas>
+      <i>Click chuột và kéo để điều chỉnh lượng milk, coffee, foam.</i>
+    </div>
+
+    <div class="container--progress">
+      <div class="progress progress__coffee">
+        <progress max="100" value="40" class="progressBar">
+        </progress>
+        <span class="type__coffee" types="coffee">40%</span>
+      </div>
+      <div class="progress progress__milk">
+        <progress max="100" value="30" class="progressBar">
+        </progress>
+        <span class="type__milk" types="milk">30%</span>
+      </div>
+      <div class="progress progress__foam">
+        <progress max="100" value="30" class="progressBar">
+        </progress>
+        <span class="type__foam" types="foam">30%</span>
+      </div>
+      <i>Hover logo phần trăm rồi di chuyển chuột
+        để điều chỉnh lượng milk, coffee, foam.</i>
+    </div>
+  </div>
+
+  <script
+      src="https://code.jquery.com/jquery-3.3.1.js"
+      integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+      crossorigin="anonymous"></script>
+  <script
+      src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+      integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+      crossorigin="anonymous"></script>
+  <script type="text/javascript" src='index.js'></script>
+</body>
+</html>

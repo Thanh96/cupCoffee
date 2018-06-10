@@ -1,0 +1,205 @@
+@mixin css3-prefix($property, $value) {
+  -webkit-#{$property}: #{$value};
+  -khtml-#{$property} : #{$value};
+  -moz-#{$property}   : #{$value};
+  -ms-#{$property}    : #{$value};
+  -o-#{$property}     : #{$value};
+  #{$property}        : #{$value};
+
+}
+// css prefixes
+
+@mixin bp-ip4 {
+  @media only screen and (max-width: 320px) {
+    @content;
+  }
+}
+
+@mixin bp-ip6 {
+  @media only screen and (min-width: 321px) {
+    @content;
+  }
+}
+
+@mixin bp-ip6-plus {
+  @media only screen and (min-width: 376px) and (max-width: 414px) {
+    @content;
+  }
+}
+
+@mixin bp-tablet-vertical {
+  @media only screen and (min-width: 641px) {
+    @content;
+  }
+}
+
+@mixin bp-desktop-sm {
+  @media only screen and (min-width: 769px) {
+    @content;
+  }
+}
+
+@mixin bp-desktop-md {
+  @media only screen and (min-width: 1025px) {
+    @content;
+  }
+}
+
+@mixin bp-desktop-lg {
+  @media only screen and (min-width: 1367px) {
+    @content;
+  }
+}
+
+@mixin bp-desktop-ultra {
+  @media only screen and (min-width: 1441px) {
+    @content;
+  }
+}
+// responsive
+
+.wrapper {
+  margin: 50px 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  @include bp-desktop-sm {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .container--canvas {
+    i {
+      display: none;
+      @include bp-desktop-sm() {
+        display: block;
+        margin-top: 30px;
+      }
+    }
+  }
+  // container canvas
+
+  .container--progress {
+    margin-top: 50px;
+    width: 300px;
+    @include bp-desktop-sm {
+      width: 400px;
+    }
+    i {
+      display: none;
+      @include bp-desktop-sm {
+        display: block;
+        margin-top: 50px;
+      }
+    }
+    progress {
+      width: 100%;
+      border: 0;
+      height: 20px;
+      border-radius: 20px;
+      position: relative;
+    }
+    span {
+      cursor: pointer;
+      -moz-user-select: none; /* Firefox */
+      -ms-user-select: none; /* Internet Explorer */
+      -webkit-user-select: none; /* Chrome, Safari, and Opera */
+      -webkit-touch-callout: none; /* Disable Android and iOS callouts*/
+    }
+    .progress__coffee {
+      position: relative;
+      span {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 35%;
+        padding: 10px 5px;
+        border-radius: 100%;
+        border: 2px solid black;
+        font-size: 15px;
+        background-color: #C05839;
+      }
+      progress::-webkit-progress-bar {
+        border: 0;
+        background-color: #A9ABAE;
+        border-radius: 20px;
+        //@include css3-prefix(transition, 1s);
+      }
+      progress::-webkit-progress-value {
+        border: 0;
+        border-radius: 20px;
+        background-color: #C05839;
+      }
+      progress::-moz-progress-bar {
+        border: 0;
+        background-color: #A9ABAE;
+        border-radius: 20px;
+      }
+    }
+    // progress coffee
+    .progress__milk {
+      margin-top: 30px;
+      position: relative;
+      span {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 25%;
+        padding: 10px 5px;
+        border-radius: 100%;
+        border: 2px solid black;
+        font-size: 15px;
+        background-color: #F6F7D2;
+      }
+      progress::-webkit-progress-bar {
+        border: 0;
+        background-color: #A9ABAE;
+        border-radius: 20px;
+      }
+      progress::-webkit-progress-value {
+        border: 0;
+        border-radius: 20px;
+        background-color: #F6F7D2;
+      }
+      progress::-moz-progress-bar {
+        border: 0;
+        background-color: #A9ABAE;
+        border-radius: 20px;
+      }
+    }
+    // progress milk
+    .progress__foam {
+      margin-top: 30px;
+      position: relative;
+      span {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 25%;
+        padding: 10px 5px;
+        border-radius: 100%;
+        border: 2px solid black;
+        font-size: 15px;
+        background-color: #FBF392;
+      }
+      progress::-webkit-progress-bar {
+        border: 0;
+        background-color: #A9ABAE;
+        border-radius: 20px;
+      }
+      progress::-webkit-progress-value {
+        border: 0;
+        border-radius: 20px;
+        background-color: #FBF392;
+      }
+      progress::-moz-progress-bar {
+        border: 0;
+        background-color: #A9ABAE;
+        border-radius: 20px;
+      }
+    }
+    // progress foam
+  }
+  // container progress
+}
+
