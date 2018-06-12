@@ -195,19 +195,19 @@ $(document).ready(function () {
                 // decrease coffee, milk, foam
 
                 if (e.pageX > xMouseStart && total < 100) {
-                  if (type === 'coffee' && progressCoffee < 100) {
+                  if (type === 'coffee') {
                     progressCoffee += 1;
                     $(this).parent().find('progress').attr('value', progressCoffee);
                     $(this).css({ left: progressCoffee - 5 + "%" });
                     $(this).text(progressCoffee + '%');
                   }
-                  if (type === 'milk' && progressMilk < 100) {
+                  if (type === 'milk') {
                     progressMilk += 1;
                     $(this).parent().find('progress').attr('value', progressMilk);
                     $(this).css({ left: progressMilk - 5 + "%" });
                     $(this).text(progressMilk + '%');
                   }
-                  if (type === 'foam' && progressFoam < 100) {
+                  if (type === 'foam') {
                     progressFoam += 1;
                     $(this).parent().find('progress').attr('value', progressFoam);
                     $(this).css({ left: progressFoam - 5 + "%" });
@@ -244,7 +244,7 @@ $(document).ready(function () {
                 if (e.pageY > yMouseStart && progressCoffee > 0) {
                   progressCoffee -= 1;
                 }
-                if (e.pageY < yMouseStart && progressCoffee < 100 && total < 100) {
+                if (e.pageY < yMouseStart && total < 100) {
                   progressCoffee += 1;
                 }
                 $(".progress__coffee").find('progress').attr('value', progressCoffee);
@@ -255,7 +255,7 @@ $(document).ready(function () {
                 if (e.pageY > yMouseStart && progressMilk > 0) {
                   progressMilk -= 1;
                 }
-                if (e.pageY < yMouseStart && progressMilk < 100 && total < 100) {
+                if (e.pageY < yMouseStart && total < 100) {
                   progressMilk += 1;
                 }
                 $(".progress__milk").find('progress').attr('value', progressMilk);
@@ -266,7 +266,7 @@ $(document).ready(function () {
                 if (e.pageY > yMouseStart && progressFoam > 0) {
                   progressFoam -= 1;
                 }
-                if (e.pageY < yMouseStart && progressFoam < 100 && total < 100) {
+                if (e.pageY < yMouseStart && total < 100) {
                   progressFoam += 1;
                 }
                 $(".progress__foam").find('progress').attr('value', progressFoam);
