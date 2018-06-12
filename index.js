@@ -158,16 +158,16 @@ $(document).ready(function () {
     updateCupCoffee();
 
     var xMouseStart;
-    var isDragPro = false;
+    var isDragPro = true; // false event dragging mouse
 
     $(".container--progress span")
         .mouseenter(function (e) {
             xMouseStart = e.pageX;
-            isDragPro = true;
+//             isDragPro = true; 
         })
-        .mouseleave(function () {
-            isDragPro = false;
-        })
+//         .mouseleave(function () {
+//             isDragPro = false;
+//         }) // 
         .mousemove(function (e) {
             if (isDragPro) {
                 var type = $(this).attr("types");
@@ -212,7 +212,6 @@ $(document).ready(function () {
                     $(this).parent().find('progress').attr('value', progressFoam);
                     $(this).css({ left: progressFoam - 5 + "%" });
                     $(this).text(progressFoam + '%');
-
                   }
                 }
                 //increase coffe, milk, foam
